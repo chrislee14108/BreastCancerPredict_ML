@@ -26,3 +26,14 @@ FCBF-Random forest: 91% Sensitivity: 91% Specificity: 91% F1-Score: 0.91 Kappa :
 PC-ANN: Accuracy: 90%  Sensitivity: 86% Specificity: 93 F1-Score: 0.89 Kappa: 0.80
 PC-SVM: Accuracy: 91% Sensitivity: 91% Specificity: 91% F1-Score: 0.91  Kapp: 0.82
 PC-Random forest: 86% Sensitivity: 91% Specificity: 82% F1-Score: 0.87 Kappa : 0.73
+
+Ensemble Models:
+
+ENSEMBLE MODELS-BAGGED
+For ensemble models, since Random forest is already an extension of a bagged model only SVM and ANN models were considered. ANN seemed to be an interesting choice while it also achieved second highest AUC score after Random forest so, I focused on trying to optimize the second best model since the best model is already a bagged model. The bagged ANN model achieved the same accuracy rate as the original ANN model, with higher sensitivity and lower specificity. 
+
+ENSEMBLE MODEL -STACKED 
+Next, I created a stacked model as a function which I combined SVM, ANN, and random forests together to make predictions on the test set. The accuracy rate was the highest of all models with an accuracy rate of 94%, higher than the bagged ANN model. 
+
+
+
